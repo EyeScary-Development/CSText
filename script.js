@@ -79,14 +79,6 @@ function focusMode(){
     document.getElementById("foc").style.display = "none";
 }
 
-function unfocus(){
-    console.log("Focus mode off")
-    document.getElementById("editor").style['width'] = "70%";
-    document.getElementById("info").style.display = "block";
-    document.getElementById("foc").style.display = "block";
-    document.getElementById("unfoc").style.display = "none";
-}
-
 //Save and saveload functions
 function save(quill) {
     console.log('Saving changes');
@@ -276,7 +268,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     setInterval(saveLocal, 10000)
     setInterval(countChars, 500);
-});
-document.addEventListener('DOMContentLoaded', function() {
-    focusMode()
+    focusMode();
 });

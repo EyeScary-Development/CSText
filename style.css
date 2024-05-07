@@ -50,11 +50,15 @@ body {
     background: none;
     padding: 0.5rem;
     white-space: 0;
+    border-radius:10px;
+    border-width: 0px;
+    background-color: #1e1e2e;
 }
 
 .normalbutton:hover {
     color: #cdd6f4 !important;
-    background-color: #1e1e2e !important;
+    background-color: #313244 !important;
+    border-radius:10px;
 }
 
 
@@ -109,7 +113,7 @@ body {
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: #555 transparent transparent transparent;
+    border-color: #00000000;
 }
   
 .tooltip:hover .tooltiptext {
