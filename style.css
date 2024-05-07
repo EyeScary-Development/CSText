@@ -3,6 +3,7 @@ body {
     height: 100vh;
     color: #cdd6f4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    float:center;
   }
 
 .ql-toolbar .ql-stroke {
@@ -22,7 +23,7 @@ body {
 #editor {
     width: 70%;
     max-height: 80%;
-    float: left;
+    float: center;
 }
 
 #toolbar {
@@ -50,6 +51,7 @@ body {
 
 #mainheader {
     font-family: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+    text-align:center;
 }
 
 #unfoc {
