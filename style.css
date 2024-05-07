@@ -2,11 +2,13 @@ body {
     background-color: #181825;
     height: 100vh;
     color: #cdd6f4;
+    stroke:none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   }
 
 .ql-toolbar .ql-stroke {
     fill: none;
+    stroke: none;
 }
   
 .ql-toolbar .ql-fill {
