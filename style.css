@@ -26,6 +26,7 @@ body {
     float: center;
     border-radius: 32px;
     background-color: #1e1e2e
+    padding:12px;
 }
 
 #toolbar {
