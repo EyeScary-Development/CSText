@@ -50,7 +50,6 @@ body {
     background: none;
     padding: 0.5rem;
     white-space: 0;
-    border-radius:10px;
     border-width: 0px;
     background-color: #1e1e2e;
 }
@@ -58,7 +57,6 @@ body {
 .normalbutton:hover {
     color: #cdd6f4 !important;
     background-color: #313244 !important;
-    border-radius:10px;
 }
 
 
