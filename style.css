@@ -8,15 +8,18 @@ body {
 .ql-toolbar .ql-stroke {
     fill: none;
     stroke: #cdd6f4;
+    background-color:#1e1e2e !important;
 }
   
 .ql-toolbar .ql-fill {
     fill: #cdd6f4;
     stroke: none;
+    background-color:#1e1e2e !important;
 }
   
 .ql-toolbar .ql-picker {
     color: #cdd6f4;
+    background-color:#1e1e2e !important;
 }
 
 .ql-picker-options {
@@ -32,7 +35,7 @@ body {
 #toolbar {
     width: 52%;
     float: center;
-    background-color:#1e1e2e;
+    background-color:#1e1e2e !important;
 }
 
 

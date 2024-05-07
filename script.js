@@ -228,7 +228,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             [{ 'color': [] }, { 'background': [] }],
             [{ 'script': 'sub'}, { 'script': 'super' }],
             [{'header': 1}, {'header': 2}],
-            ['blockquote', 'code-block', 'formula'],
             ['clean']
             ],
             handlers: {
