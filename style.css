@@ -8,18 +8,15 @@ body {
 .ql-toolbar .ql-stroke {
     fill: none;
     stroke: #cdd6f4;
-    background-color:#1e1e2e !important;
 }
   
 .ql-toolbar .ql-fill {
     fill: #cdd6f4;
     stroke: none;
-    background-color:#1e1e2e !important;
 }
   
 .ql-toolbar .ql-picker {
     color: #cdd6f4;
-    background-color:#1e1e2e !important;
 }
 
 #editor {
@@ -31,8 +28,6 @@ body {
 #toolbar {
     width: 52%;
     float: center;
-    background-color:#1e1e2e !important;
-    color:#1e1e2e !important;
 }
 
 
@@ -44,12 +39,12 @@ body {
     padding: 5px;
     white-space: 0;
     border-width: 0px;
-    background-color: #1e1e2e;
+    background-color: #181825;
 }
 
 .normalbutton:hover {
     color: #cdd6f4 !important;
-    background-color: #313244 !important;
+    background-color: #1e1e2e !important;
 }
 
 
