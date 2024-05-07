@@ -1,4 +1,4 @@
-var quill = "justfuckingworkplsplspls"; //Just makes it global, please ignore then content of it
+var quill = "placeholder";
 
 //Sleep
 function sleep(ms) {
@@ -17,7 +17,6 @@ function clipCopy(stuff) {
 //Make HTML out of quill
 function quilltoHTML(debug=false){
     try {
-    alert("No style is included, and equations are funky but other than that i think this works");
     console.log("Converting quill to HTML..");
     ogcontent = quillGetHTML();
     if(debug){
