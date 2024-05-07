@@ -1,45 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wilbur's Projects</title>
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="https://wilburwilliams.uk/assets/icon.png">
-    <link rel="preload" href="https://wilburwilliams.uk/assets/background.png" as="image">
-    <link rel="preload" href="https://raw.githubusercontent.com/ThisCatLikesCrypto/github-stats/master/generated/overview.svg#gh-dark-mode-only" as="image">
-    <link rel="preload" href="https://raw.githubusercontent.com/ThisCatLikesCrypto/github-stats/master/generated/languages.svg#gh-dark-mode-only" as="image">
-</head>
-<body>
-    <div class="nav">
-        <a href="https://wilburwilliams.uk">Personal Site</a>
-        <a href="index.html">Projects Home</a>
-        <a href="https://eyescary.pages.dev">EyeScary</a>
+    <title>wTextitor</title>
+    <link rel="icon" type="image/x-icon" href="https://dev.wilburwilliams.uk/assets/icon.png">
+    <link href="quill/quill.snow.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="katex/katex.min.css">
+  <body>
+    <script src="katex/katex.min.js"></script>
+    <script src="quill/quill.js"></script>
+    <script src="script.js"></script>
+    <h1 id="mainheader" onclick="alert('Stands for Wilbur Text Editor')">CSCode</h1>
+    <button class="normalbutton" onclick="saveLocal()">Save</button>
+    <button class="normalbutton" onclick="dlSave()">Download</button>
+    <button class="normalbutton" onclick="upSave()">Open file</button>
+    <button class="normalbutton" id="foc" onclick="focusMode()">Focus Mode</button>
+    <button class="normalbutton" id="unfoc" onclick="unfocus()">Remove Focus Mode</button>
+    <button class="normalbutton tooltip" onclick="quilltoHTML()">Convert to HTML</button>
+    <div id="editor">
+      <p></p>
     </div>
-    <div>
-        <h1>Wilbur's Projects/Portfolio Site</h1>
-        <p>Welcome to the projects site. This will list anything I make that needs to be run in the browser, and maybe more later.</p>
+    <div id="infobar">
+      <h3 id="charcount">&nbsp;&nbsp;Characters: loading...</h3>
+      <br>
     </div>
-    <div class="main">
-        <div class="stuff">
-            <h2>Things that I have worked on</h2>
-            <h3>Not an exhaustive list</h3>
-            <h4>Python</h4>
-            <p><a href="https://eyescary.is-a.dev/stronge">Stronge</a> - A minimal command-line text editor, complete with syntax highlighting for:</p>
-            <p><a href="https://eyescary.is-a.dev/ESDlang">ESDLang</a> - 'EyeScary Development Language', a very not-feature-rich programming language</p>
-            <p><a href="https://github.com/ThisCatLikesCrypto/GivAPI">GivAPI</a> - A simple python script for interfacing with the <a href="https://beta.givenergy.cloud/docs/api/v1">GivEnergy API</a></p>
-            <p><a href="https://github.com/ThisCatLikesCrypto/EncryptedPasswordManager">EncryptedPasswordManager</a> - A basic tkinter password manager, written badly as it was written a while ago</p>
-            <h4>JavaScript</h4>
-            <p><a href="wTextitor/index.html">wTextitor</a> - A pretty cool quill-based text editor</p>
-            <p><a href="wGrid/index.html">wGrid</a> - Currently an on-hold side project, I may make it into a full-on grid dashboard soon</p>
-            <p><a href="games/cokie/cokcl.html">Cokie Cliker</a> - a very bad Cookie Clicker ripoff (made with <a href="https://github.com/pittab">pittab</a>)</p>
-        </div>
-        <div class="ghstats">
-            <h2>GitHub Stats</h2>
-            <p></p>
-            <img src="https://raw.githubusercontent.com/ThisCatLikesCrypto/github-stats/master/generated/overview.svg#gh-dark-mode-only">
-            <img src="https://raw.githubusercontent.com/ThisCatLikesCrypto/github-stats/master/generated/languages.svg#gh-dark-mode-only">
-        </div>
-    </div> 
-</body>
+    <br><br><br><br><br>
+    <div id="htmlout">
+      <h1>HTML converted text</h1>
+      <code id="convertedhtml"></code>
+    </div>
+  </body>
 </html>
