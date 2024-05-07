@@ -2,7 +2,6 @@ body {
     background-color: #181825;
     height: 100vh;
     color: #cdd6f4;
-    stroke:none;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   }
 
@@ -22,6 +21,7 @@ body {
 
 .ql-picker-options {
     background-color: #181825 !important;
+    padding:5px;
 }
 
 #editor {
@@ -49,7 +49,7 @@ body {
     float: right;
     width: fit-content !important;
     background: none;
-    padding: 0.5rem;
+    padding: 2px;
     white-space: 0;
     border-width: 0px;
     background-color: #1e1e2e;
