@@ -20,7 +20,7 @@ body {
 }
 
 .ql-picker-options {
-    background-color: #313244 !important;
+    background-color: #1e1e2e !important;
 }
 
 #editor {
@@ -32,6 +32,7 @@ body {
 #toolbar {
     width: 52%;
     float: center;
+    background-color:#1e1e2e;
 }
 
 
