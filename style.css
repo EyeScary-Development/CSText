@@ -1,26 +1,26 @@
 body {
-    background-color: #121212;
+    background-color: #181825;
     height: 100vh;
-    color: white;
+    color: #cdd6f4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
   }
 
 .ql-toolbar .ql-stroke {
     fill: none;
-    stroke: aqua;
+    stroke: #cdd6f4;
 }
   
 .ql-toolbar .ql-fill {
-    fill: aqua;
+    fill: #cdd6f4;
     stroke: none;
 }
   
 .ql-toolbar .ql-picker {
-    color: aqua;
+    color: #cdd6f4;
 }
 
 .ql-picker-options {
-    background-color: black !important;
+    background-color: #181825 !important;
 }
 
 #editor {
@@ -44,7 +44,7 @@ body {
 }
 
 .normalbutton {
-    color: aqua !important;
+    color: #cdd6f4 !important;
     float: right;
     width: fit-content !important;
     background: none;
@@ -53,13 +53,10 @@ body {
 }
 
 .normalbutton:hover {
-    color: black !important;
-    background-color: aqua !important;
+    color: #cdd6f4 !important;
+    background-color: #1e1e2e !important;
 }
 
-#info {
-    text-align: center;
-}
 
 #mainheader {
     font-family: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
