@@ -21,7 +21,6 @@ body {
 
 .ql-picker-options {
     background-color: #181825 !important;
-    padding:5px;
 }
 
 #editor {
@@ -49,7 +48,7 @@ body {
     float: right;
     width: fit-content !important;
     background: none;
-    padding: 2px;
+    padding: 5px;
     white-space: 0;
     border-width: 0px;
     background-color: #1e1e2e;
