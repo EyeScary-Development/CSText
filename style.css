@@ -7,7 +7,6 @@ body {
 
 .ql-toolbar .ql-stroke {
     fill: #cdd6f4;
-    stroke: none;
 }
   
 .ql-toolbar .ql-fill {
@@ -20,7 +19,7 @@ body {
 }
 
 .ql-picker-options {
-    background-color: #181825 !important;
+    background-color: #1e1e2e !important;
 }
 
 #editor {
