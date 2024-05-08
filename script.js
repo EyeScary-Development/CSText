@@ -52,7 +52,7 @@ function quilltoHTML(debug=false){
     if(debug){
         console.log(brrr);
     }
-    strappedstyle="<style>body{font-family:"+fontSizeArr+"px;font-family:'"+FontFace+"';}</style>\n";
+    strappedstyle="<style>body{font-family:"+Size+"px;font-family:'"+FontFace+"';}</style>\n";
     console.log(strappedstyle);
     output=strappedstyle+brrr;
 
