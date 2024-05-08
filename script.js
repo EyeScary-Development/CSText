@@ -1,6 +1,6 @@
 var quill = "placeholder";
-var Size = 8;
-
+var Size = Quill.import('attributors/style/size');;
+var Font = Quill.import('attributors/style/font');
 //Sleep
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
