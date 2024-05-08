@@ -66,16 +66,6 @@ function quilltoHTML(debug=false){
     }
 }
 
-
-//Intitate focus mode (get rid of the explanation bit and widen the editor)
-function focusMode(){
-    console.log("Focus mode on");
-    document.getElementById("editor").style['width'] = "100%";
-    document.getElementById("info").style.display = "none";
-    document.getElementById("unfoc").style.display = "block";
-    document.getElementById("foc").style.display = "none";
-}
-
 //Save and saveload functions
 function save(quill) {
     console.log('Saving changes');
@@ -267,5 +257,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     setInterval(saveLocal, 10000)
     setInterval(countChars, 500);
-    focusMode();
+    document.getElementById("editor").style['width'] = "100%";
+    document.getElementById("info").style.display = "none";
+    document.getElementById("unfoc").style.display = "block";
+    document.getElementById("foc").style.display = "none";
 });
