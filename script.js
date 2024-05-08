@@ -114,7 +114,11 @@ function dlSave(){
     };
     const link = document.createElement ('a');
     var nam = prompt("File name:", "coolfileig")
-    link.setAttribute ('download', nam);
+    if (nam == null){
+        link.setAttribute ('download', "cscodesave");
+    } else{
+        link.setAttribute ('download', nam);
+    }
     link.href = makeTextFile(save(quill));
     try {
         link.click();
