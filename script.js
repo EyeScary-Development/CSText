@@ -113,7 +113,8 @@ function dlSave(){
       return textFile;
     };
     const link = document.createElement ('a');
-    link.setAttribute ('download', "texteditSaveFile");
+    var nam = prompt("File name:", "coolfileig")
+    link.setAttribute ('download', nam);
     link.href = makeTextFile(save(quill));
     try {
         link.click();
