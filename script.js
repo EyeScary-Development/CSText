@@ -256,6 +256,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
     setInterval(saveLocal, 10000)
-    setInterval(countChars, 500);
-    document.getElementById("editor").style['width'] = "100%";
 });
