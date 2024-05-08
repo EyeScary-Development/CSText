@@ -52,7 +52,7 @@ function quilltoHTML(debug=false){
     if(debug){
         console.log(brrr);
     }
-
+    strappedstyle="<style>body{font-family:"+fontSizeArr+"px;font-family:'"+FontFace+"';}</style>\n";
     output=brrr;
 
     document.getElementById('convertedhtml').innerText = output;
@@ -192,10 +192,9 @@ function videoHandler() {
     if (url) {
         url = getVideoUrl(url); // Convert the URL to an embeddable format
         if (url == "invalid") {
-            alert("invalid url provided (needs youtube or vimeo, defaulting to.. well...)");
-            url = "https://www.youtube.com/embed/dQw4w9WgXcQ?showinfo=0"
-            console.log("invalid url, defaulting to rickroll");
-;       }
+            alert("invalid url provided (needs youtube or vimeo)");
+            url=False;
+        }
 
         let range = quill.getSelection();
         if (url) {
@@ -224,7 +223,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             ['bold', 'italic', 'underline', 'strike'],
             ['link', 'image', 'video'],
             [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }, { 'align': [] }],
-            [{ 'indent': '-1'}, { 'indent': '+1' }],
             [{ 'color': [] }, { 'background': [] }],
             [{ 'script': 'sub'}, { 'script': 'super' }],
             [{'header': 1}, {'header': 2}],
