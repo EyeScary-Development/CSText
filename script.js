@@ -1,6 +1,4 @@
 var quill = "placeholder";
-var Size = Quill.import('attributors/style/size');;
-var Font = Quill.import('attributors/style/font');
 //Sleep
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -53,7 +51,8 @@ function quilltoHTML(debug=false){
     if(debug){
         console.log(brrr);
     }
-    strappedstyle="<style>body{font-family:"+Size+"px;font-family:'"+FontFace+"';}</style>\n";
+    var format = quill.getFormat(range.index, range.length);
+    strappedstyle="<style>body{font-family:"+format['size']+"px;font-family:'"+format['font']+"';}</style>\n";
     console.log(strappedstyle);
     output=strappedstyle+brrr;
 
@@ -216,7 +215,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const fontSizeArr = ['8px','9px','10px','12px','14px','16px','20px','24px','32px','42px','54px','68px','84px','98px'];
     try {
         var Delta = Quill.import('delta');
-        Size = Quill.import('attributors/style/size');
+        var Size = Quill.import('attributors/style/size');
         Size.whitelist = fontSizeArr;
         Quill.register(Size, true);
         var toolbarOptions = {
