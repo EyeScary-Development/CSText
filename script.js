@@ -1,4 +1,5 @@
 var quill = "placeholder";
+var Size = 8;
 
 //Sleep
 function sleep(ms) {
@@ -215,7 +216,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const fontSizeArr = ['8px','9px','10px','12px','14px','16px','20px','24px','32px','42px','54px','68px','84px','98px'];
     try {
         var Delta = Quill.import('delta');
-        var Size = Quill.import('attributors/style/size');
+        Size = Quill.import('attributors/style/size');
         Size.whitelist = fontSizeArr;
         Quill.register(Size, true);
         var toolbarOptions = {
