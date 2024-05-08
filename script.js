@@ -54,8 +54,8 @@ function quilltoHTML(debug=false){
     var firstOp = quill.getContents().ops.find(op => op.insert !== '\n'); // Find the first non-empty text segment
     var font = firstOp.attributes && firstOp.attributes.font ? firstOp.attributes.font : 'Sans-Serif';
     var size = firstOp.attributes && firstOp.attributes.size ? firstOp.attributes.size : '8px';
-    strappedstyle="<style>\nbody{\nfont-family:"+font+";\n}\n</style>\n";
-    console.log(strappedstyle);
+    strappedstyle="<style>\nbody{\nbackground-color:#1e1e2e;color:#cdd6f4;font-family:"+font+";\n}\n</style>\n";
+    console.log("Style to strap: "strappedstyle);
     output=strappedstyle+brrr;
 
     document.getElementById('convertedhtml').innerText = output;
@@ -218,7 +218,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             [{ 'color': [] }, { 'background': [] }],
             [{ 'script': 'sub'}, { 'script': 'super' }],
             [{'header': 1}, {'header': 2}],
-            ['clean']
             ],
             handlers: {
                 video: videoHandler
@@ -255,5 +254,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
         change = change.compose(delta);
     });
 
-    setInterval(saveLocal, 10000)
+    setInterval(saveLocal, 5000)
 });
