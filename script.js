@@ -54,7 +54,7 @@ function quilltoHTML(debug=false){
     var firstOp = quill.getContents().ops.find(op => op.insert !== '\n'); // Find the first non-empty text segment
     var font = firstOp.attributes && firstOp.attributes.font ? firstOp.attributes.font : 'Sans-Serif';
     var size = firstOp.attributes && firstOp.attributes.size ? firstOp.attributes.size : '8px';
-    strappedstyle="<style>\nbody{\nbackground-color:#1e1e2e;color:#cdd6f4;font-family:"+font+";\n}\n</style>\n";
+    strappedstyle="<style>\nbody{\nbackground-color:#1e1e2e;\ncolor:#cdd6f4;\nfont-family:"+font+";\n}\n</style>\n";
     console.log("Style to strap: "+strappedstyle);
     output=strappedstyle+brrr;
 
