@@ -55,7 +55,7 @@ function quilltoHTML(debug=false){
     var font = firstOp.attributes && firstOp.attributes.font ? firstOp.attributes.font : 'Sans-Serif';
     var size = firstOp.attributes && firstOp.attributes.size ? firstOp.attributes.size : '8px';
     strappedstyle="<style>\nbody{\nbackground-color:#1e1e2e;color:#cdd6f4;font-family:"+font+";\n}\n</style>\n";
-    console.log("Style to strap: "strappedstyle);
+    console.log("Style to strap: "+strappedstyle);
     output=strappedstyle+brrr;
 
     document.getElementById('convertedhtml').innerText = output;
