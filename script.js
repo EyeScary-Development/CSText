@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }, { 'align': [] }],
             [{ 'background': [] }],
             [{ 'script': 'sub'}, { 'script': 'super' }],
-            [{'header': 1}, {'header': 2}],
+            [{'header': 1}, {'header': 2}]
             ],
             handlers: {
                 video: videoHandler
