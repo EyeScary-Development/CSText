@@ -54,8 +54,10 @@ function quilltoHTML(debug=false){
     var range = quill.getSelection();
     if (range) {
         var format = quill.getFormat(range.index, range.length);
+        var siz=format[size]
+        var fon=format[font]
     }
-    strappedstyle="<style>body{font-family:"+format['size']+"px;font-family:'"+format['font']+"';}</style>\n";
+    strappedstyle="<style>body{font-family:"+fon+"px;font-size:'"+siz+"';}</style>\n";
     console.log(strappedstyle);
     output=strappedstyle+brrr;
 
