@@ -200,7 +200,7 @@ function videoHandler() {
 
 //Essentially the main function, cuz quill needs the page to be loaded first (ik it's not a function)
 document.addEventListener('DOMContentLoaded', (event) => {
-    console.log("CSCode 0.1.0, powered by wTextitor v0.2.1c")
+    console.log("CSCode 0.2.0, powered by wTextitor v0.2.1c")
     //Only init quill after everything has loaded because otherwise it throws an error :shrug:
     console.log("initalise quill");
     const fontSizeArr = ['8px','9px','10px','12px','14px','16px','20px','24px','32px','42px','54px','68px','84px','98px'];
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             ['bold', 'italic', 'underline', 'strike'],
             ['link', 'image', 'video'],
             [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }, { 'align': [] }],
-            [{ 'color': [] }, { 'background': [] }],
+            [{ 'background': [] }],
             [{ 'script': 'sub'}, { 'script': 'super' }],
             [{'header': 1}, {'header': 2}],
             ],
