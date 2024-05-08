@@ -53,6 +53,7 @@ function quilltoHTML(debug=false){
         console.log(brrr);
     }
     strappedstyle="<style>body{font-family:"+fontSizeArr+"px;font-family:'"+FontFace+"';}</style>\n";
+    console.log(strappedstyle);
     output=strappedstyle+brrr;
 
     document.getElementById('convertedhtml').innerText = output;
