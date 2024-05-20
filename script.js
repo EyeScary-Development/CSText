@@ -97,10 +97,8 @@ function dlSave(){
       return textFile;
     };
     const link = document.createElement ('a');
-    var nam = prompt("File name:", "coolfileig")
-    if (nam == null){
-        link.setAttribute ('download', "cscodesave");
-    } else{
+    var nam = prompt("File name:")
+    if (nam != null){
         link.setAttribute ('download', nam);
     }
     link.href = makeTextFile(save(quill));
@@ -108,7 +106,7 @@ function dlSave(){
         link.click();
         console.log("successfully downloaded text file");
     } catch(error) {
-        console.log("fuck you :D " + error);
+        console.log("error: " + error);
     }
 }
 
