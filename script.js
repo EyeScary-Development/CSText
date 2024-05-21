@@ -99,14 +99,14 @@ function dlSave(){
     const link = document.createElement ('a');
     var nam = prompt("File name:")
     if (nam != null){
-        link.setAttribute ('download', nam);
+        link.setAttribute ('download', nam + ".cst");
     }
     link.href = makeTextFile(save(quill));
     try {
         link.click();
         console.log("successfully downloaded text file");
     } catch(error) {
-        console.log("error: " + error);
+        console.log("fuck you :D " + error);
     }
 }
 
@@ -178,7 +178,6 @@ return "invalid";
 function videoHandler() {
     console.log("Video embed button triggered");
     let url = prompt("Enter Video URL:"); // Prompt the user for the video URL
-    
     if (url) {
         url = getVideoUrl(url); // Convert the URL to an embeddable format
         if (url == "invalid") {
