@@ -14,11 +14,14 @@
     <script src="script.js"></script>
     <div id="toolbar">
     </div>
-    <button class="normalbutton" onclick="saveLocal()">Save Project</button>
-    <button class="normalbutton" onclick="loadLocal()">Load Project</button>
+    <div id="dropdown-content">
     <button class="normalbutton" onclick="dlSave()">Download file</button>
     <button class="normalbutton" onclick="upSave()">Open file</button>
     <button class="normalbutton tooltip" onclick="quilltoHTML()">Convert to HTML</button>
+    </div>
+    <button class="normalbutton" onclick="dropdown()">File</button>
+    <button class="normalbutton" onclick="saveLocal()">Save Project</button>
+    <button class="normalbutton" onclick="loadLocal()">Load Project</button>
     <div id="editor">
     </div>
     <br><br><br>

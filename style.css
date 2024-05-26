@@ -27,7 +27,9 @@ body {
     border-radius: 32px;
     background-color: #1e1e2e;
 }
-
+#dropdown-content{
+    display:none;
+}
 #toolbar {
     width: 52%;
     float: center;

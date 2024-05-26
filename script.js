@@ -1,4 +1,5 @@
 var quill = "placeholder";
+var lastset = "none"
 //Sleep
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -104,6 +105,16 @@ function loadLocal(){
     }
 }
 
+function dropdown(){
+    if (lastset == "block"){
+        document.getElementById("dropdown-content").style.display="none"
+        lastset = "none"
+    } else {
+        document.getElementById("dropdown-content").style.display="block"
+        lastset = "block"
+    }
+}
+
 function dlSave(){
     console.log("dlSave requested");
     let textFile = null;
@@ -155,7 +166,7 @@ function upSave(){
 }
 
 //Function to get HTML from a quill delta
-function quillGetHTML(inputDelta=JSON.parse(localStorage.getItem('storedText'))) {
+function quillGetHTML(inputDelta=quill.getContents()) {
     console.log("Get Quill HTML");
     try {
         var tempCont = document.createElement("div");
