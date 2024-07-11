@@ -1,0 +1,42 @@
+@import "base.css";
+
+body {
+    background-color: #ffffff !important; 
+    color: #1f1f1f !important;
+}
+
+.ql-toolbar .ql-stroke {
+    stroke: #1f1f1f !important;
+}
+  
+.ql-toolbar .ql-fill {
+    fill: #1f1f1f !important;
+}
+  
+.ql-toolbar {
+    color: #1f1f1f !important;
+}
+
+.ql-picker-options {
+    color: #1f1f1f !important;
+    background-color: #ffffff !important;
+}
+
+.ql-picker{
+    color: #1f1f1f !important;
+}
+
+#editor {
+    background-color: #f3f3f1 !important;
+}
+
+
+.normalbutton {
+    color: #1f1f1f !important;
+    background-color: #ffffff !important;
+}
+
+.normalbutton:hover {
+    color: #1f1f1f !important;
+    background-color: #f3f3f1 !important;
+}

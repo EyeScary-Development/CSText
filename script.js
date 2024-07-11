@@ -14,6 +14,29 @@ function clipCopy(stuff) {
     }
 }
 
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
+  var expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(";");
+  for (var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
 //Make HTML out of quill
 function quilltoHTML(debug=false){
     try {
@@ -227,7 +250,7 @@ function videoHandler() {
 
 //Essentially the main function, cuz quill needs the page to be loaded first (ik it's not a function)
 document.addEventListener('DOMContentLoaded', (event) => {
-    console.log("CStext 0.2.0, powered by wTextitor v0.2.1c")
+    console.log("CStext 0.3.0, powered by wTextitor v0.2.1c")
     //Only init quill after everything has loaded because otherwise it throws an error :shrug:
     console.log("initalise quill");
     const fontSizeArr = ['8px','9px','10px','12px','14px','16px','20px','24px','32px','42px','54px','68px','84px','98px'];
@@ -274,6 +297,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     if (toContinue != "no"){
         loadLocal()
     }
+    if (getCookie("theme") != ""){
+        document.getElementById("theme").href="css/"+getCookie("theme")+".css"
+    }
 });
 
 function getQueryVariable(variable) {
@@ -286,4 +312,20 @@ function getQueryVariable(variable) {
     }
   } 
   return "no";
+}
+
+function showSettings(){
+    document.getElementById("notSettings").style.display="none"
+    document.getElementById("settings").style.display="block"
+}
+
+function hideSettings(){
+    document.getElementById("settings").style.display="none"
+    document.getElementById("notSettings").style.display="block"
+}
+
+
+function changeTheme(theme){
+    setCookie("theme", theme, 365)
+    alert("theme set, save your work and reload cstext when you are ready")
 }

@@ -6,18 +6,20 @@
     <title>CSText</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
     <link href="quill/quill.snow.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <link id="theme" href="css/default.css" rel="stylesheet">
     <link rel="stylesheet" href="katex/katex.min.css">
   <body>
+  <div id="notSettings">
     <script src="katex/katex.min.js"></script>
     <script src="quill/quill.js"></script>
     <script src="script.js"></script>
     <div id="toolbar">
     </div>
     <div id="dropdown-content">
-    <button class="normalbutton" onclick="dlSave()">Download file</button>
-    <button class="normalbutton" onclick="upSave()">Open file</button>
-    <button class="normalbutton tooltip" onclick="quilltoHTML()">Convert to HTML</button>
+    <button class="normalbutton" onclick="dlSave()">Download</button>
+    <button class="normalbutton" onclick="upSave()">Open</button>
+    <button class="normalbutton" onclick="quilltoHTML()">Convert to HTML</button>
+    <button class="normalbutton" onclick="showSettings()">Settings</button>
     </div>
     <button class="normalbutton" onclick="dropdown()">File</button>
     <button class="normalbutton" onclick="saveLocal()">Save Project</button>
@@ -28,6 +30,21 @@
     <div id="htmlout">
       <h1>HTML converted text</h1>
       <code id="convertedhtml"></code>
+    </div>
+  </div>
+    <div id="settings" style="display:none">
+      <select onchange="changeTheme(this.value)">
+        <option value="default">Catppuccin Mocha</option>
+        <option value="dark">Material dark</option>
+        <option value="light">Material light</option>
+      </select>
+      <br>
+      <br>
+      <button class="normalbutton" style="float:left !important" onclick="hideSettings()">Close settings</button>
+      <br>
+      <br>
+      <p>CSText v0.3.0, powered by wTextitor v0.2.1c from <a href="https://wilbur.is-a.dev">Wilbur Williams</a></p>
+      <p>Uses KaTeX and Quill JS</p>
     </div>
   </body>
 </html>
