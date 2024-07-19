@@ -1,5 +1,6 @@
 var quill = "placeholder";
 var lastset = "none"
+var output
 //Sleep
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -81,8 +82,10 @@ function quilltoHTML(debug=false){
     strappedstyle="<style>\nbody{\nbackground-color:#1e1e2e;\ncolor:#cdd6f4;\nfont-family:"+font+";\n}\n</style>\n";
     console.log("Style to strap: "+strappedstyle);
     output=strappedstyle+brrr;
-
+    hostlink="https://cstext.pages.dev/host/?note="+encodeURIComponent(output)
+    hostbutton="<button onclick='clipCopy("+hostlink+")>Send to a friend? (view only)</button>"
     document.getElementById('convertedhtml').innerText = output;
+    document.getElementById('host').innerHTML=hostbutton
     document.getElementById('htmlout').style.display = 'block';
     console.log("..success!")
     } catch(error){
