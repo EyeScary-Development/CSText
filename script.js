@@ -85,7 +85,7 @@ function quilltoHTML(debug=false){
     hostlink="https://cstext.pages.dev/host/?note="+encodeURIComponent(output)
     hostbutton="<button class='normalbutton' onclick='clipCopy("+hostlink+")>Send to a friend? (view only)</button>"
     document.getElementById('convertedhtml').innerText = output;
-    document.getElementById('host').innerHTML=hostbutton
+    document.getElementById('host').innerHTML = hostbutton
     document.getElementById('htmlout').style.display = 'block';
     console.log("..success!")
     } catch(error){
