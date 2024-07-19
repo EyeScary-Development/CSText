@@ -268,6 +268,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             ['bold', 'italic', 'underline', 'strike'],
             ['link', 'image', 'video'],
             [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }, { 'align': [] }],
+            ['blockquote', 'code-block', 'formula'],
             [{ 'background': [] }],
             [{ 'script': 'sub'}, { 'script': 'super' }],
             [{'header': 1}, {'header': 2}]
