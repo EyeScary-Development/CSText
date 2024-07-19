@@ -83,7 +83,7 @@ function quilltoHTML(debug=false){
     console.log("Style to strap: "+strappedstyle);
     output=strappedstyle+brrr;
     hostlink="https://cstext.pages.dev/host/?note="+encodeURIComponent(output)
-    hostbutton="<button onclick='clipCopy("+hostlink+")>Send to a friend? (view only)</button>"
+    hostbutton="<button class='normalbutton' onclick='clipCopy("+hostlink+")>Send to a friend? (view only)</button>"
     document.getElementById('convertedhtml').innerText = output;
     document.getElementById('host').innerHTML=hostbutton
     document.getElementById('htmlout').style.display = 'block';
