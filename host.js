@@ -11,6 +11,8 @@ function getQueryVariable(variable) {
 }
 
 document.addEventListener("DOMContentLoaded", function{
-  var cod=decodeURIComponent(getQueryVariable("note"));
+  const cod = decodeURIComponent(escape(atob(getQueryVariable("note"))));
   document.getElementById("editor").innerHTML = cod;
 })
+
+console.log(decodedString);

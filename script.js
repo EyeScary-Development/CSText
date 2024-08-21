@@ -82,7 +82,8 @@ function quilltoHTML(debug=false){
     strappedstyle="<style>\nbody{\nbackground-color:#1e1e2e;\ncolor:#cdd6f4;\nfont-family:"+font+";\n}\n</style>\n";
     console.log("Style to strap: "+strappedstyle);
     output=strappedstyle+brrr;
-    hostlink="https://cstext.pages.dev/host/?note="+encodeURIComponent(output)
+    const encodedString = btoa(unescape(encodeURIComponent(output)));
+    hostlink="https://cstext.pages.dev/host/?note="+encodedString;
     hostbutton="<button class='normalbutton' onclick='clipCopy("+hostlink+")>Send to a friend? (view only)</button>"
     document.getElementById('convertedhtml').innerText = output;
     document.getElementById('host').innerHTML = hostbutton
