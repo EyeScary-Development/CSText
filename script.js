@@ -88,7 +88,7 @@ function quilltoHTML(debug=false){
     copyButton.textContent = "Share this note with a friend? (currently read only)";
     copyButton.class= "normalbutton"
     copyButton.onclick = function() {
-        clipCopy(hostLink);
+        clipCopy(hostlink);
         alert('link copied')
     };
     document.getElementById('host').appendChild(copyButton)
