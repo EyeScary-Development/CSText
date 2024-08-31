@@ -87,7 +87,10 @@ function quilltoHTML(debug=false){
     const copyButton = document.createElement("button");
     copyButton.textContent = "Share this note with a friend? (currently read only)";
     copyButton.class= "normalbutton"
-    copyButton.onclick="clipCopy("+hostlink+");alert('link copied')"
+    copyButton.onclick = function() {
+        clipCopy(hostLink);
+        alert('link copied')
+    };
     document.getElementById('host').appendChild(copyButton)
     document.getElementById('convertedhtml').innerText = output;
     document.getElementById('htmlout').style.display = 'block';
