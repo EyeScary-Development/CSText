@@ -84,9 +84,13 @@ function quilltoHTML(debug=false){
     output=strappedstyle+brrr;
     const encodedString = btoa(unescape(encodeURIComponent(output)));
     hostlink="https://cstext.pages.dev/host/?note="+encodedString;
-    hostbutton="<button class='normalbutton' onclick='clipCopy("+hostlink+")>Send to a friend? (view only)</button>"
+    const copyButton = document.createElement("button");
+    copyButton.textContent = "Share this note with a friend? (currently read only)"; // Set the button text
+    copyButton.id = "copyButton"; // Set an ID for the button
+    copyButton.class= "normalbutton"
+    copyButton.onclick="clipCopy(hostlink)"
+    document.getElementById('host').appendChild(copyButton)
     document.getElementById('convertedhtml').innerText = output;
-    document.getElementById('host').innerHTML = hostbutton
     document.getElementById('htmlout').style.display = 'block';
     console.log("..success!")
     } catch(error){
