@@ -10,9 +10,10 @@ function getQueryVariable(variable) {
   return "no";
 }
 
-document.addEventListener("DOMContentLoaded", function{
-  const cod = decodeURIComponent(escape(atob(getQueryVariable("note"))));
-  document.getElementById("editor").innerHTML = cod;
-})
+document.addEventListener("DOMContentLoaded", function() {
+    const note = getQueryVariable("note");
+    const cod = decodeURIComponent(escape(atob(note)));
+    document.getElementById("editor").innerHTML = cod;
+});
 
 console.log(decodedString);
