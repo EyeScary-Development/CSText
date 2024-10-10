@@ -1,31 +1,40 @@
 body {
     height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Open Sans', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
-    float:center;
-  }
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Open Sans",
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Helvetica Neue",
+        sans-serif;
+    float: center;
+}
 
 .ql-toolbar .ql-stroke {
     fill: none;
 }
-  
+
 .ql-toolbar .ql-fill {
     stroke: none;
 }
 
 #editor {
-    width: 100%;
+    width: 100vw;
     height: 80vh;
-    float: center;
-    border-radius: 32px;
+    left: 0;
 }
-#dropdown-content{
-    display:none;
+#dropdown-content {
+    display: none;
 }
 #toolbar {
     width: 52%;
     float: center;
 }
-
 
 .normalbutton {
     float: right;
@@ -33,23 +42,25 @@ body {
     background: none;
     padding: 5px;
     white-space: 0;
-    border-width: 0px;}
+    border-width: 0px;
+}
 
 #mainheader {
-    font-family: 'SF Mono', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
-    text-align:center;
+    font-family: "SF Mono", "Monaco", "Consolas", "Liberation Mono",
+        "Courier New", monospace;
+    text-align: center;
 }
 
 #unfoc {
     display: none;
 }
 
-.ql-snow{
-    .ql-picker{
-        &.ql-size{
+.ql-snow {
+    .ql-picker {
+        &.ql-size {
             .ql-picker-label,
-            .ql-picker-item{
-                &::before{
+            .ql-picker-item {
+                &::before {
                     content: attr(data-value) !important;
                 }
             }
@@ -61,7 +72,7 @@ body {
     position: relative;
     display: inline-block;
 }
-  
+
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
@@ -75,9 +86,9 @@ body {
     margin-left: -75px;
     opacity: 1;
     transition: opacity 0.3s;
-    border-radius: 12px
+    border-radius: 12px;
 }
-  
+
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -87,7 +98,7 @@ body {
     border-width: 5px;
     border-style: solid;
 }
-  
+
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
