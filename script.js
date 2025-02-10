@@ -86,7 +86,7 @@ function quilltoHTML(debug=false){
     hostlink="https://cstext.pages.dev/host/?note="+encodedString;
     const copyButton = document.createElement("button");
     copyButton.textContent = "Share this note with a friend? (currently read only)";
-    copyButton.class= "normalbutton"
+    copyButton.className = "normalbutton"
     copyButton.onclick = function() {
         clipCopy(hostlink);
         alert('link copied')
